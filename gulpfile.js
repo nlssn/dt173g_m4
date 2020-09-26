@@ -10,6 +10,7 @@ const imagemin = require('gulp-imagemin');
 const browserSync = require('browser-sync').create();
 const del = require('del');
 const gulpSass = require('gulp-sass');
+const babel = require('gulp-babel');
 
 /* Set up SASS default compiler */
 //gulpSass.compiler = require('node-sass');
