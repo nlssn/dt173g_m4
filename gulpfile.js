@@ -67,6 +67,9 @@ function styles() {
 function scripts() {
    return src(scriptsPath)
       .pipe(concat('global.js'))
+      .pipe(babel({
+         presets: ['@babel/env']
+      }))
       .pipe(terser())
       .pipe(rename('global.min.js'))
       .pipe(dest('dist/assets/js'))
